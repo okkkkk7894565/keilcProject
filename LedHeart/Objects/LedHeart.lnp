@@ -1,0 +1,4 @@
+".\Objects\main.obj",
+".\Objects\Delay.obj" 
+TO ".\Objects\LedHeart" 
+PRINT(".\Listings\LedHeart.m51") RAMSIZE(256) 

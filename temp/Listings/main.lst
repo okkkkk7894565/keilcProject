@@ -1,0 +1,66 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              10/31/2023 14:26:00 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          //delay va quet phim
+   2          #include <main.h>
+   3          #include <port.h>
+   4          
+   5          
+   6          void DelayVaQuetPhim(){
+   7   1          
+   8   1      }
+   9          
+  10          void main()
+  11          {
+  12   1        int i;
+  13   1      
+  14   1        while(1)
+  15   1        {
+  16   2            P2=0x00;
+  17   2            if(Start_BTT==0)
+  18   2            {
+  19   3              while(1)
+  20   3              {
+  21   4                P2=~P2; 
+  22   4                // su dung i lam co xac dinh co  bam nut ko
+  23   4                for(i=0;i<=100;i++) 
+  24   4                {
+  25   5                   Delay_ms(10); 
+  26   5                   if(Stop_BTT==0)
+  27   5                   {
+  28   6                      break;
+  29   6                   } 
+  30   5                }  
+  31   4                
+  32   4                //neu i< 100 thi co nguoi nhan nut
+  33   4                if(i<100)
+  34   4                {
+  35   5                     // thoat khoi vong while
+  36   5                     break;
+  37   5                }
+  38   4              
+  39   4              }
+  40   3            }     
+  41   2        }
+  42   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     59    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

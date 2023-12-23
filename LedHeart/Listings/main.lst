@@ -1,0 +1,112 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              12/05/2023 15:52:10 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          #include <..\Lib\Delay.h>
+   3          
+   4          void daoByteP0();
+   5          void daoByteP1();
+   6          void daoByteP2();
+   7          void daoByteP3();
+   8          void dichTraiSoAm();
+   9          
+  10          
+  11          
+  12          void daoByteP0(){
+  13   1          P0=0xAA;
+  14   1          Delay_ms(500);
+  15   1          P0=~P0;   // dao bittt cho P0_0
+  16   1          Delay_ms(500);
+  17   1          
+  18   1      }
+  19          void daoByteP1(){
+  20   1          P1=0xAA;;
+  21   1          Delay_ms(500);
+  22   1          P1=~P1;   // dao bittt cho P0_1
+  23   1          Delay_ms(500); 
+  24   1      }
+  25          void daoByteP2(){
+  26   1          P2=0xAA;;
+  27   1          Delay_ms(500);
+  28   1          P2=~P2;   // dao bittt cho P0_2
+  29   1          Delay_ms(500);
+  30   1          
+  31   1      }
+  32          
+  33          void daoByteP3(){
+  34   1          P3=0xAA;;
+  35   1          Delay_ms(500);
+  36   1          P3=~P3;   // dao bittt cho P0_3
+  37   1          Delay_ms(500);
+  38   1      }
+  39          ////////////////////////////////////////////////////////////////////////
+  40            ///phep dich bit
+  41          void dichBitP0(){
+  42   1          int i;
+  43   1          P0=0x80;
+  44   1          for(i=0;i<8;i++){
+  45   2            P0=P0>>1;
+  46   2            Delay_ms(300);
+  47   2          }
+  48   1          
+  49   1      }
+  50          
+  51          void dichTraiSoAm(){
+  52   1          int i;
+  53   1          P0=0x01;
+  54   1          Delay_ms(300);
+C51 COMPILER V9.60.7.0   MAIN                                                              12/05/2023 15:52:10 PAGE 2   
+
+  55   1          for(i=0;i<8;i++){
+  56   2            P0=P0<<1;
+  57   2            Delay_ms(300);
+  58   2          } 
+  59   1      }
+  60          void dichTraiP1(){
+  61   1          int i;
+  62   1          P1=0x01;
+  63   1          Delay_ms(300);
+  64   1          for(i=0;i<8;i++){
+  65   2            P1=P1<<1;
+  66   2            Delay_ms(300);
+  67   2          } 
+  68   1          
+  69   1      }
+  70          
+  71          void main(){
+  72   1        int i;    
+  73   1        while (1)
+  74   1         {
+  75   2            dichTraiSoAm(); 
+  76   2            dichTraiP1();
+  77   2            daoByteP0();
+  78   2            
+  79   2         }
+  80   1            
+  81   1        
+  82   1      }
+*** WARNING C280 IN LINE 72 OF main.c: 'i': unreferenced local variable
+  83          
+  84          
+  85          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    228    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       8
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

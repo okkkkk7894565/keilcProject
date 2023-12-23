@@ -1,0 +1,121 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    10/31/2023  14:26:00  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj, .\Objects\Delay.obj TO .\Objects\temp PRINT (.\Listings\temp.m51) RAMSIZ
+>> E (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  .\Objects\Delay.obj (DELAY)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\temp (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     003AH     UNIT         ?PR?MAIN?MAIN
+            CODE    003DH     0020H     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    005DH     000CH     UNIT         ?C_C51STARTUP
+            CODE    0069H     0001H     UNIT         ?PR?DELAYVAQUETPHIM?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\temp (MAIN)
+
+
+SEGMENT                            DATA_GROUP 
+  +--> CALLED SEGMENT            START    LENGTH
+------------------------------------------------
+?C_C51STARTUP                    -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                    0008H    0002H
+  +--> ?PR?_DELAY_MS?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\temp (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  C:0003H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  10/31/2023  14:26:00  PAGE 2
+
+
+  B:0090H.0       PUBLIC        Start_BTT
+  C:0069H         PUBLIC        DelayVaQuetPhim
+  B:0090H.1       PUBLIC        Stop_BTT
+  -------         PROC          DELAYVAQUETPHIM
+  C:0069H         LINE#         6
+  C:0069H         LINE#         8
+  -------         ENDPROC       DELAYVAQUETPHIM
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         10
+  C:0003H         LINE#         11
+  C:0003H         LINE#         14
+  C:0003H         LINE#         15
+  C:0003H         LINE#         16
+  C:0006H         LINE#         17
+  C:0009H         LINE#         18
+  C:0009H         LINE#         19
+  C:0009H         LINE#         20
+  C:0009H         LINE#         21
+  C:000CH         LINE#         23
+  C:0011H         LINE#         24
+  C:0011H         LINE#         25
+  C:0018H         LINE#         26
+  C:001BH         LINE#         27
+  C:001BH         LINE#         28
+  C:001BH         LINE#         29
+  C:001BH         LINE#         30
+  C:002EH         LINE#         33
+  C:003BH         LINE#         34
+  C:003BH         LINE#         36
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:003DH         PUBLIC        _Delay_ms
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0004H         SYMBOL        x
+  D:0002H         SYMBOL        y
+  -------         ENDDO         
+  C:003DH         LINE#         3
+  C:003DH         LINE#         5
+  C:0047H         LINE#         6
+  C:0055H         LINE#         7
+  C:005CH         LINE#         8
+  -------         ENDPROC       _DELAY_MS
+  -------         ENDMOD        DELAY
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAYVAQUETPHIM?MAIN
+
+Program Size: data=11.0 xdata=0 code=106
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
