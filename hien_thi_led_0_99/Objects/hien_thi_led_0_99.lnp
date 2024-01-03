@@ -1,0 +1,4 @@
+".\Objects\main.obj",
+".\Objects\Delay.obj" 
+TO ".\Objects\hien_thi_led_0_99" 
+PRINT(".\Listings\hien_thi_led_0_99.m51") RAMSIZE(256) 

@@ -1,0 +1,42 @@
+C51 COMPILER V9.60.7.0   LEDDON                                                            10/27/2023 19:06:28 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE LEDDON
+OBJECT MODULE PLACED IN .\Objects\leddon.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE leddon.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\le
+                    -ddon.lst) TABS(2) OBJECT(.\Objects\leddon.obj)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          
+   3          void Delay_ms(int time){
+   4   1        int i,y;
+   5   1        for(i=0;i<=time;i++){
+   6   2          for(y=0;y<=123;y++){}
+   7   2        }
+   8   1      }
+   9          
+  10          void main(){
+  11   1        while(1)
+  12   1        {
+  13   2         P0_0=0;
+  14   2         Delay_ms(100);
+  15   2         P0_0=1;
+  16   2         Delay_ms(100);
+  17   2        } 
+  18   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     54    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

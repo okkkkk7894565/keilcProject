@@ -1,0 +1,64 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              10/31/2023 14:40:37 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          //delay va quet phim
+   2          #include <main.h>
+   3          #include <port.h>
+   4          
+   5          
+   6          
+   7          
+   8          void main()
+   9          {
+  10   1        int i;
+  11   1      
+  12   1        while(1)
+  13   1        {
+  14   2            P2=0x00;
+  15   2            if(Start_BTT==0)
+  16   2            {
+  17   3              while(1)
+  18   3              {
+  19   4                P2=~P2; 
+  20   4                // su dung i lam co xac dinh co  bam nut ko
+  21   4                for(i=0;i<=100;i++) 
+  22   4                {
+  23   5                   Delay_ms(10); 
+  24   5                   if(Stop_BTT==0)
+  25   5                   {
+  26   6                      break;
+  27   6                   } 
+  28   5                }  
+  29   4                
+  30   4                //neu i< 100 thi co nguoi nhan nut
+  31   4                if(i<100)
+  32   4                {
+  33   5                     // thoat khoi vong while
+  34   5                     break;
+  35   5                }
+  36   4              
+  37   4              }
+  38   3            }     
+  39   2        }
+  40   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     58    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

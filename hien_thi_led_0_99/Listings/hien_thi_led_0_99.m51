@@ -1,0 +1,115 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    01/03/2024  16:39:06  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj, .\Objects\Delay.obj TO .\Objects\hien_thi_led_0_99 PRINT (.\Listings\hie
+>> n_thi_led_0_99.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  .\Objects\Delay.obj (DELAY)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\hien_thi_led_0_99 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000AH     UNIT         ?DT?MAIN
+            DATA    0012H     0005H     UNIT         _DATA_GROUP_
+            IDATA   0017H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     005BH     UNIT         ?PR?MAIN?MAIN
+            CODE    00EAH     0020H     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    010AH     000DH     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\hien_thi_led_0_99 (MAIN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                  0012H    0005H
+  +--> ?PR?_DELAY_MS?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\hien_thi_led_0_99 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/03/2024  16:39:06  PAGE 2
+
+
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:008FH         PUBLIC        main
+  B:00A0H.0       PUBLIC        LED1_PIN
+  B:00A0H.1       PUBLIC        LED2_PIN
+  D:0008H         PUBLIC        code7Seg
+  -------         PROC          MAIN
+  -------         DO            
+  D:0012H         SYMBOL        dem
+  D:0013H         SYMBOL        chuc
+  D:0014H         SYMBOL        donvi
+  D:0015H         SYMBOL        time
+  -------         ENDDO         
+  C:008FH         LINE#         10
+  C:008FH         LINE#         14
+  C:008FH         LINE#         15
+  C:0092H         LINE#         16
+  C:009AH         LINE#         17
+  C:00A3H         LINE#         18
+  C:00A8H         LINE#         19
+  C:00B0H         LINE#         20
+  C:00B2H         LINE#         21
+  C:00B9H         LINE#         22
+  C:00BBH         LINE#         24
+  C:00C3H         LINE#         25
+  C:00C5H         LINE#         26
+  C:00CCH         LINE#         27
+  C:00CEH         LINE#         29
+  C:00DFH         LINE#         30
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:00EAH         PUBLIC        _Delay_ms
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0004H         SYMBOL        x
+  D:0002H         SYMBOL        y
+  -------         ENDDO         
+  C:00EAH         LINE#         3
+  C:00EAH         LINE#         5
+  C:00F4H         LINE#         6
+  C:0102H         LINE#         7
+  C:0109H         LINE#         8
+  -------         ENDPROC       _DELAY_MS
+  -------         ENDMOD        DELAY
+
+Program Size: data=24.0 xdata=0 code=279
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,4 @@
+".\Objects\main.obj",
+".\Objects\Delay.obj" 
+TO ".\Objects\DelayVaQuetPhim" 
+PRINT(".\Listings\DelayVaQuetPhim.m51") RAMSIZE(256) 

@@ -1,0 +1,4 @@
+".\Objects\main.obj",
+".\Objects\Delay.obj" 
+TO ".\Objects\ChopTatLedDaoBit_ledblink" 
+PRINT(".\Listings\ChopTatLedDaoBit_ledblink.m51") RAMSIZE(256) 

@@ -1,0 +1,153 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    10/30/2023  22:59:44  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj, .\Objects\Delay.obj TO .\Objects\GiaoTiepNutBam PRINT (.\Listings\GiaoTi
+>> epNutBam.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  .\Objects\Delay.obj (DELAY)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\GiaoTiepNutBam (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0020H     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    0023H     0018H     UNIT         ?PR?DAOTRANGTHAILED?MAIN
+            CODE    003BH     0010H     UNIT         ?PR?SUDUNG2NUTNHAN?MAIN
+            CODE    004BH     000CH     UNIT         ?C_C51STARTUP
+            CODE    0057H     0009H     UNIT         ?PR?DOCP10DIEUKHIENP21?MAIN
+            CODE    0060H     0005H     UNIT         ?PR?MAIN?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\GiaoTiepNutBam (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?DAOTRANGTHAILED?MAIN
+
+?PR?DAOTRANGTHAILED?MAIN
+  +--> ?PR?_DELAY_MS?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\GiaoTiepNutBam (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  10/30/2023  22:59:44  PAGE 2
+
+
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  B:0090H.0       PUBLIC        P1_0
+  B:00A0H.0       PUBLIC        P2_0
+  C:0060H         PUBLIC        main
+  B:0090H.1       PUBLIC        OFF_BTT
+  C:0057H         PUBLIC        docP10dieuKhienP21
+  B:0090H.2       PUBLIC        changeStatus_BTT
+  C:0023H         PUBLIC        daoTrangThaiLed
+  B:00A0H.0       PUBLIC        LED
+  B:0090H.0       PUBLIC        ON_BTT
+  C:003BH         PUBLIC        suDung2NutNhan
+  -------         PROC          DOCP10DIEUKHIENP21
+  C:0057H         LINE#         10
+  C:0057H         LINE#         11
+  C:005AH         LINE#         12
+  C:005AH         LINE#         13
+  C:005CH         LINE#         14
+  C:005DH         LINE#         15
+  C:005FH         LINE#         16
+  C:005FH         LINE#         17
+  -------         ENDPROC       DOCP10DIEUKHIENP21
+  -------         PROC          SUDUNG2NUTNHAN
+  C:003BH         LINE#         21
+  C:003BH         LINE#         22
+  C:003DH         LINE#         23
+  C:003DH         LINE#         24
+  C:003DH         LINE#         26
+  C:003FH         LINE#         27
+  C:0042H         LINE#         28
+  C:0044H         LINE#         29
+  C:0044H         LINE#         30
+  C:0044H         LINE#         31
+  C:0047H         LINE#         32
+  C:0049H         LINE#         33
+  C:0049H         LINE#         34
+  -------         ENDPROC       SUDUNG2NUTNHAN
+  -------         PROC          DAOTRANGTHAILED
+  C:0023H         LINE#         41
+  C:0023H         LINE#         42
+  C:0023H         LINE#         43
+  C:0025H         LINE#         44
+  C:0025H         LINE#         45
+  C:0025H         LINE#         47
+  C:0027H         LINE#         49
+  C:002AH         LINE#         50
+  C:0031H         LINE#         51
+  C:0034H         LINE#         52
+  C:0036H         LINE#         55
+  -------         ENDPROC       DAOTRANGTHAILED
+  -------         PROC          MAIN
+  C:0060H         LINE#         61
+  C:0060H         LINE#         62
+  C:0060H         LINE#         64
+  C:0060H         LINE#         65
+  C:0060H         LINE#         66
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  10/30/2023  22:59:44  PAGE 3
+
+
+  C:0063H         LINE#         67
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0003H         PUBLIC        _Delay_ms
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0004H         SYMBOL        x
+  D:0002H         SYMBOL        y
+  -------         ENDDO         
+  C:0003H         LINE#         3
+  C:0003H         LINE#         5
+  C:000DH         LINE#         6
+  C:001BH         LINE#         7
+  C:0022H         LINE#         8
+  -------         ENDPROC       _DELAY_MS
+  -------         ENDMOD        DELAY
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DOCP10DIEUKHIENP21?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?SUDUNG2NUTNHAN?MAIN
+
+Program Size: data=9.0 xdata=0 code=101
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)

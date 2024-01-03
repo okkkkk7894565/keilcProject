@@ -1,0 +1,52 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              12/26/2023 16:01:57 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<main.h>
+*** WARNING C323 IN LINE 1 OF main.h: newline expected, extra characters found
+   2          #include "..\lib\delay.h"
+   3          // dung Schematic DenGiaoThong
+   4          
+   5          #define LED_PORT P3
+   6          sbit led1_pin= P2^0;
+   7          sbit led2_pin= P2^1;
+   8          unsigned char code7Seg[]={0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90};
+   9          
+  10          void main(){
+  11   1        unsigned char i=0;
+  12   1        while (1)
+  13   1        {  
+  14   2                led1_pin=0; 
+  15   2                LED_PORT=code7Seg[2];
+  16   2                Delay_ms(1);
+  17   2                led1_pin=1; 
+  18   2                led2_pin=0; 
+  19   2                LED_PORT=code7Seg[6];
+  20   2                Delay_ms(1);
+  21   2                led2_pin=1; 
+  22   2        }
+  23   1      }
+  24          
+  25          
+  26          
+  27          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     33    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     10       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

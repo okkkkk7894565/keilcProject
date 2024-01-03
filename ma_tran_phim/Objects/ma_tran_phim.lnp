@@ -1,0 +1,3 @@
+".\Objects\Delay.obj" 
+TO ".\Objects\ma_tran_phim" 
+PRINT(".\Listings\ma_tran_phim.m51") RAMSIZE(256) 

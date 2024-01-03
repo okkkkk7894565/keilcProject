@@ -1,0 +1,47 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              12/23/2023 10:58:14 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<main.h>
+   2          #include "..\lib\delay.h"
+   3          // dung Schematic DenGiaoThong
+   4          
+   5          sbit BTN=P1^0;
+*** ERROR C202 IN LINE 5 OF main.c: 'P1': undefined identifier
+   6          #define Led P2;
+   7          
+   8          unsigned char code7Seg[]={0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90};
+   9          
+  10          void main(){
+  11   1        unsigned char dem=0;
+  12   1        while (1)
+  13   1        {  
+  14   2          BTN=1;
+*** ERROR C202 IN LINE 14 OF main.c: 'BTN': undefined identifier
+  15   2          if (BTN==0)
+*** ERROR C202 IN LINE 15 OF main.c: 'BTN': undefined identifier
+  16   2          {  
+  17   3              Delay_ms(20);
+  18   3              if (BTN==0)
+*** ERROR C202 IN LINE 18 OF main.c: 'BTN': undefined identifier
+  19   3              {  
+  20   4                dem++;
+  21   4              }
+  22   3          }
+  23   2          Led = code7Seg[dem%5+1];
+*** ERROR C202 IN LINE 23 OF main.c: 'P2': undefined identifier
+*** ERROR C141 IN LINE 23 OF main.c: syntax error near '=', expected '__asm'
+  24   2        }
+  25   1      }
+  26          
+  27          
+  28          
+  29          
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  6 ERROR(S)
